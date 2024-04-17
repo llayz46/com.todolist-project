@@ -10,6 +10,8 @@
 
     if ($user) {
       // Si on a un user, on le connecte
+      $_SESSION['user'] = $user;
+      header('Location: index.php');
     } else {
       // Si on a pas de user, on affiche un message d'erreur
       $errors[] = 'Identifiants ou mot de passe incorrects';
